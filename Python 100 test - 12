@@ -1,0 +1,13 @@
+# 题目：判断101-200之间有多少个素数，并输出所有素数。
+
+def sushu (a, b):
+  su = [2]
+  for i in range (3 : b + 1):
+    for j in su:
+      if i % j == 0:
+        break
+      else:
+        su.append(i)
+  return filter(lambda x: x >= a, su)
+
+print (sushu(101,200))
