@@ -1,21 +1,26 @@
 # 题目：将一个正整数分解质因数。例如：输入90,打印出90=2*3*3*5
 
+# Input validation  
+while true:
+  input = input('Please give a number (interger only)')
+  if is_integer(input):
+    if input < 2:
+       print ('The number should be greater than 2.', end = '\n')
+    else:
+       break
 
-def zhishu(n):    
-  
-  return (shulist)   # return a list including all prime numbers from 2 to n.
-  
-while number 
-number = input('Please give a number (interger only)')
-prime = []
-primeNumber = zhishu(number)
-for i in primeNumber:
-  if number % i == 0:
-      number /= i
-      prime.append(i)
+# main program  
+number = input
+primeList = []   # create a list to store the primes can be devided by input.
+while number > 1:   # Loop each number from 2 to number.
+   for i in range (2:number + 1):
+      while number % i == 0:
+         primeList.append(i)
+         number = number / i
+   
+# printout. something like "90=2*3*3*5"
+print(number, " = ", " * ".join([str(x) for x in primeList]))
 
-print('%s = %s', % (number, prime[0]), end = '')
-for j in range(1:len(prime)):
-    for print(' * %s', % prime[j])
+      
     
       
