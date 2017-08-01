@@ -1,0 +1,24 @@
+# 题目：输入一行字符，分别统计出其中英文字母、空格、数字和其它字符的个数。
+
+
+
+def conut(str):
+    conut = []
+    conut [0] = list(filter(lambda x :x.isisalpha(), str))
+    conut [1] = list(filter(lambda x :x.isdigit(), str))
+    conut [2] = list(filter(lambda x :x.isspace(), str))
+    conut [3] = list(filter(lambda x : not x.isspace() or x.isisalpha() or x.isdigit() , str))
+return conut[]
+
+
+while True:
+  str = input('Please input a string.')
+      if str != '\n':
+          break
+      print(r'The string can not be '\n'')
+
+counting = conut(str)
+print('The string includes %s letters.' % len(counting[0])
+print('The string includes %s numbers.' % len(counting[1]) 
+print('The string includes %s spaces.' % len(counting[2])
+print('The string includes %s other characters.' % len(counting[3])
