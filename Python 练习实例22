@@ -1,0 +1,40 @@
+# Python3
+'''
+题目：两个乒乓球队进行比赛，各出三人。甲队为a,b,c三人，乙队为x,y,z三人。
+已抽签决定比赛名单。有人向队员打听比赛的名单。a说他不和x比，c说他不和x,z比，请编程序找出三队赛手的名单。 
+
+'''
+def matchpools (A, B):     # create a matchs pool during each iteration. The exptions and the matchs which have been assgined are excluded from this pool.
+    pool = []
+    for a in A:
+        for b in B:
+            if a + b not in exception:
+                pool.append(a + b)
+    return pool         
+                    
+
+def matchingAB(team_A, team_B)     
+    teamA = team_A.list()       # 看看这里是copy 还是reffrence. 
+    teamB = team_B.list()
+    match = []
+    for i in teamA:
+        pools = matchpools(teamA,teamB)
+      for j in teamB:
+           if i + j in pools:
+                match.append(i + j)
+                teamA.remove(i)
+                teamB.remove(j)
+    return match
+
+#  **********main program**********
+team_A = ['a','b','c']
+team_B = ['x','y','z']
+exception = ['ax','cx','xy']
+
+results = matching(team_A, team_B)
+for m in results:
+    print(m, end= '\n')
+
+
+# MORE PRACTICE: try join function to print the result in the way like 'a<==>b'
+# MORE PRACTICE: try "random" function to have a different match every time runing the program.
