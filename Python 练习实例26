@@ -1,0 +1,12 @@
+题目：利用递归方法求5!。
+
+# python3
+
+def recuis(n):
+    if n == 1:
+        return 1
+    else:
+        return n * recuis(n-1)
+        
+in = 5
+print (recuis(in))
