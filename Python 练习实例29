@@ -1,0 +1,19 @@
+# 题目：给一个不多于5位的正整数，要求：一、求它是几位数，二、逆序打印出各位数字。
+# 程序分析：学会分解出每一位数。
+# python3
+
+
+import random
+
+
+def revprint(n):   # 还是用递归， 从后往前一个一个打印。
+    if n < 10:
+        print (n)
+    else:
+        n = n // 10
+        revprint(n)
+    
+
+n = random.randmint(0,99999)   # 随机生成一个不多于5位的正整数。
+print ('The random number is %s' % n)
+revprint (n)
