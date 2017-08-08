@@ -6,13 +6,13 @@
 # 利用递归思路   
 
 
-def monkeyking(n)
+def monkeyking(n):
     if n == 1:
         return 1
     else:
         return (monkeyking(n-1) + 1) *2
         
 
-n = input('How many days total?')
+n = int(input('How many days total?'))  # 通过input 得到的为字符串 需要 转换成整数  by "int"
 print (n)
   
